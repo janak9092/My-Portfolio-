@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/9a771cc40c.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>welcome to my portfolio</title>
+
+    
+    
+    <style> 
+
+       /* Loading Screen Styling */
+       #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:  #0d64e6; /* Background color of the loading screen */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999; /* Ensure it's on top of other content */
+            font-size: 2rem; /* Font size for loading text */
+        }
+
+      
+      /* Video Background Styling */
+      .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+        /* Scroll-based Animation Styling */
+        .section {
+            opacity: 0; /* Start invisible */
+            transform: translateY(50px); /* Start slightly below */
+            transition: all 0.8s ease; /* Smooth transition */
+        }
+
+        .section-visible {
+            opacity: 1; /* Fully visible */
+            transform: translateY(0); /* Original position */
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+      .content-overlay {
+        position: relative;
+        z-index: 1; /* Ensures content appears above the video */
+        color: rgb(240, 233, 233);
+      }
+    </style>
+  </head>
+  <body>
+      <!-- Loading Screen -->
+      <div id="loading">Loading...</div>
+
+    <!-- Video Background -->
+    <video class="video-background" autoplay muted loop>
+      <source src="images\starbackgroud.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    
+
+    <!-- Main Content -->
+    <div class="container content-overlay">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="image-container">
+          <img src="images\JD_logo.png" alt="Logo" />
+        </div>
+        <ul id="sidemenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+
+      <!-- Main body -->
+      <div class="main_body" id="home">
+        <div class="header_text">
+          
+          <p>QA Tester</p>
+          <h1>Hello👋, I am <span>Janak Darji!😃</span><br /><p>📱 For Contact</p></h1>
+          <div class="social-icons">
+            <a href="https://github.com/janak9092/" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/janak-darji-815845204/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+           <!-- <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a> -->
+            <a href="https://www.instagram.com/janakdarji9091/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/Janak81617802/"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="portfolio_image">
+          <img src="images\image.jpeg" alt="Image By Freepik" />
+        </div>
+      </div>
+      <!-- About Me Section -->
+      <div id="about" class="about_me">
+        <div class="about_me_photo">
+          <div class="about_me_photo_container">
+            <img src="images\face image.jpg" alt="My Photo" />
+          </div>
+        </div>
+        <div class="about_me_content">
+          <h1 class="subtitle">About Me</h1>
+          <p style="text-align: justify">
+            I am a passionate QA Tester with a focus on ensuring the best quality in software and mobile gaming applications. 
+            I specialize in finding bugs, improving user experience, and delivering reliable products. 
+            I am dedicated to learning new tools and testing methods every day to grow my skills and stay updated. With a problem-solving mindset and attention to detail, 
+            I aim to contribute to creating efficient and user-friendly applications.
+          </p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="openTab('skills')">
+              Skills
+            </p>
+           <!-- <p class="tab-links" onclick="openTab('experience')">Experience</p> -->
+            <p class="tab-links" onclick="openTab('education')">Experience</p>
+            
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <div class="tab_content_container">
+              <div class="tab-item show">
+                <div class="tab-item-skill">
+                  <span>HTML/CSS</span>
+                  <progress title="50%" value="50" max="100">50%</progress>
+                </div>
+              </div>
+
+              <div class="tab-item show">
+                <div class="tab-item-skill">
+                  <span>JavaScript</span>
+                  <progress title="70%" value="70" max="100">70%</progress>
+                </div>
+              </div>
+
+              <div class="tab-item show">
+                <div class="tab-item-skill">
+                  <span>Manual Testing</span>
+                  <progress title="70%" value="70" max="100">60%</progress>
+                </div>
+              </div>
+
+              <div class="tab-item">
+                <div class="tab-item-skill">
+                  <span>Automation Testing </span>
+                  <progress title="70%" value="70" max="100">50%</progress>
+                </div>
+              </div>
+
+              <div class="tab-item">
+                <div class="tab-item-skill">
+                  <span>Bug Tracking & Reporting</span>
+                  <progress title="60%" value="60" max="100">60%</progress>
+                </div>
+              </div>
+
+              <div class="tab-item">
+                <div class="tab-item-skill">
+                  <span>Mobile Application Testing</span>
+                  <progress title="60%" value="60" max="100">60%</progress>
+                </div>
+              </div>
+
+              <div class="tab-item">
+                <div class="tab-item-skill">
+                  <span>Web Application Testing</span>
+                  <progress title="75%" value="75" max="100">75%</progress>
+                </div>
+              </div>
+
+              <div class="tab-item">
+                <div class="tab-item-skill">
+                  <span>Test Case Design</span>
+                  <progress title="90%" value="90" max="100">90%</progress>
+                </div>
+              </div>
+
+              <div class="tab-item">
+                <div class="tab-item-skill">
+                  <span>Selenium</span>
+                  <progress title="80%" value="80" max="100">65%</progress>
+                </div>
+              </div>
+
+              <div class="tab-item">
+                <div class="tab-item-skill">
+                  <span>JIRA</span>
+                  <progress title="60%" value="60" max="100">80%</progress>
+                </div>
+              </div>
+            </div>
+            <button class="show-more-btn">Show More</button>
+          </div>
+
+          <!-- tab content : education -->
+          <div class="tab-contents" id="education">
+            <div class="tab-item-edu">
+              <div class="education_card">
+                <h2> Wide Space Digital </h2>
+                <p><span>Oct 1, 2023 - Dec 26, 2023</span></p>
+                <p><h3>Social Media intern :</h3> During my intership, I learned video editing, managing social media accounts, scheduling posts, 
+                  and creating engaging content for different platforms.
+                </p>
+              </div>
+            </div>
+            <div class="tab-item-edu">
+              <div class="education_card">
+                <h2>August Infotech</h2>
+                <p><span>Jan 1,2024 - June 28, 2024</span></p>
+                <p><h3>QA Tester intern :</h3> During my QA intership, I gained knowledge of manual testing, writing test cases, finding and reporting bugs,
+                   and understanding the basics of automation testing. 
+                    This exprience helped me develop an eye for detail and improve the quality of software ! </p>
+              </div>
+            </div>
+           <!-- <div class="tab-item-edu">
+              <div class="education_card">
+                <h2>Sheth K.T High School</h2>
+                <p><span>March 2017 - March 2018</span></p>
+                <p>10th SSC</p>
+              </div>-->
+            </div>
+          </div>
+
+          <!-- tab content : experience  -->
+        <div class="tab-contents" id="experience">
+          <div class="tab-item-edu">
+              <h2>
+                August Infotech 
+              </h2>
+              <p><span>Jan 1, 2024 - June 28, 2024</span></p>
+              <p>QA Tester Internship <a></a></p>
+            </div>
+          </div> 
+        </div>
+      </div>
+
+    <!-- Projects Section -->
+<section class="projects" id="projects">
+  <h1 class="subtitle">Projects</h1>
+  <div class="projects_list">
+    <div class="project_list">
+      <div class="project">
+        <img src="images\voice Assistant.jpeg" alt="Voice Assistant Github" />
+        <div class="project-heading">
+          <h3>Voice Assistant</h3>
+          <p>Virtual Voice Assistant like Alexa!</p>
+          <a href="https://github.com/janak9092/Virtual-Voice-assistance/" target="_blank">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="project_list">
+      <div class="project">
+        <img src="images\Manual Testing.png" alt="documents Github" />
+        <div class="project-heading">
+          <h3>Manaul Testing</h3>
+          <p>Manaual Testing Documents!</p>
+          <a href="https://github.com/janak9092/Manual-Testing-/" target="_blank">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="project_list">
+      <div class="project">
+        <img src="images\Automation Testing.jpeg" alt="Test Script Github" />
+        <div class="project-heading">
+          <h3>Autoamtion Testing</h3>
+          <p>Test Script!</p>
+          <a href="https://github.com/janak9092/Automation-testing-script-/" target="_blank">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project_list">
+      <div class="project">
+        <img src="" alt="add in future" />
+        <div class="project-heading">
+          <h3>No Project</h3>
+          <p>I will add in future</p>
+        <!--  <a href="" target="_blank">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn" id="show-more-btn">See More</button>
+</section>
+
+
+      <!--  Contact Me Section-->
+      <section class="contact_me" id="contact">
+        <div class="contact_details">
+          <h1 class="subtitle">Contact Me</h1>
+          <div class="contact_info">
+            <p>
+              <i class="fa-solid fa-paper-plane"></i>
+              &nbsp;&nbsp;janak.darji90@gmail.com
+            </p>
+            <p><i class="fa-solid fa-phone"></i> &nbsp;&nbsp;+918128200837</p>
+          </div>
+
+          <div class="social-icons">
+            <a href="https://github.com/janak9092" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/janak-darji-815845204/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <!--  <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a> -->
+            <a href="https://www.instagram.com/janakdarji9091?igsh=ODFxeDA0OXV1MTRi" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com//Janak81617802/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+          <a href="files\Janak_Darji_QA_Resume.pdf" download class="btn"
+            >Download Resume</a
+          >
+        </div>
+        <div class="sender_details">
+          <form method="post" name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="Email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="Message"
+              rows="6"
+              placeholder="Your Message"
+            ></textarea>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+          <span id="msg-success"></span>
+        </div>
+      </section>
+    </div>
+    <div class="footer">
+      <p>Copyright @ Janak Darji <!--<i class="fa-solid fa-heart"></i> --> </p>
+    </div>
+
+    
+    <script>
+    // JavaScript to hide loading screen after a delay
+    window.addEventListener('load', function() {
+        const loadingScreen = document.getElementById('loading');
+        setTimeout(function() {
+            loadingScreen.style.display = 'none'; // Hide loading screen
+        }, 1000); // Set duration here (3000 milliseconds = 3 seconds)
+    });
+</script>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      var sidemenu = document.getElementById("sidemenu");
+      var success_msg = document.getElementById("msg-success");
+
+      function openTab(tabname) {
+        //removes the classname of active-link and active-tab
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+
+        // adds the focus property to tab-links
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+
+      // for opening the menu
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+
+      // for closing the menu
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+
+      // Script for submitting data to google sheet
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxnlqO18JXYgbdbpFrFIqljAmxpjQWeDGkjJnvSNdLLfPgxzPkByfABF5qxxTGc1Vjv/exec";
+      const form = document.forms["submit-to-google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            success_msg.innerHTML = "Message Sent Successfully!";
+            setTimeout(function () {
+              success_msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+
+      //Script for showing more skills in mobile view
+      document.addEventListener("DOMContentLoaded", function () {
+        const showMoreBtn = document.querySelector(".show-more-btn");
+        const items = document.querySelectorAll(".tab-item");
+
+        showMoreBtn.addEventListener("click", function () {
+          const hiddenItems = document.querySelectorAll(".tab-item:not(.show)");
+          const isShowingAll = hiddenItems.length === 0;
+
+          if (isShowingAll) {
+            items.forEach((item, index) => {
+              if (index >= 4) item.classList.remove("show");
+            });
+            showMoreBtn.textContent = "Show More";
+          } else {
+            hiddenItems.forEach((item) => {
+              item.classList.add("show");
+            });
+            showMoreBtn.textContent = "Show Less";
+          }
+        });
+
+        // Initial setup to show the first four items
+        items.forEach((item, index) => {
+          if (index < 4) item.classList.add("show");
+        });
+      });
+
+      // Script for showing projects 
+      document.addEventListener("DOMContentLoaded", () => {
+  const showMoreBtn = document.getElementById("show-more-btn");
+  const projectLists = document.querySelectorAll(".project_list");
+  
+  // Show the first 3 projects initially
+  projectLists.forEach((project, index) => {
+    if (index < 3) {
+      project.classList.add("visible");
+    }
+  });
+
+  showMoreBtn.addEventListener("click", () => {
+    projectLists.forEach((project, index) => {
+      if (index >= 3) {
+        project.classList.toggle("visible");
+      }
+    });
+
+    // Change button text
+    if (showMoreBtn.innerText === "See More") {
+      showMoreBtn.innerText = "See Less";
+    } else {
+      showMoreBtn.innerText = "See More";
+    }
+  });
+});
+
+    </script>
+
+  </body>
+
+</html>
